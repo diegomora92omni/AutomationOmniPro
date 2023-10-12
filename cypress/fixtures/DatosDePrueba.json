@@ -1,0 +1,32 @@
+{
+"nombre": [
+    "Diego",
+    "Mauricio"],
+"apellido": [
+    "Mora",
+ "Avendaño"],
+"fechaNacimiento":[
+"oct",
+"1991"],
+"email": [
+    "pruebas1@yopmail.com",
+    "pruebas2@yopmail.com",
+    "pruebas3@yopmail.com",
+    "pruebas4@yopmail.com",
+    "pruebas5@yopmail.com"],
+"genero": [
+    "Masculino",
+    "Femenino",
+    "No especificado"],
+"telefono": "98765432",
+"rut": ["23336357-k",
+"20807700-7",
+"24656131-1",
+"13999604-6",
+"7046583-3"],
+"password": [
+    "Pruebas123*",
+    "Pruebas123",
+    "Prueba1", 
+    "pruebas1"]
+}

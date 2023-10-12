@@ -1,6 +1,8 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  viewportWidth: 1366,   // Ancho en píxeles
+  viewportHeight: 768,   // Alto en píxeles
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
