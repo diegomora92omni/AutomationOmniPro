@@ -4,7 +4,7 @@ Test case #1: Verificar que un usuario no registrado pueda crear una cuenta
 Test case #2: Verificar que un usuario registrado no pueda crear una cuenta
 Test case #3: Verificar creación de cuenta sin suscribirse al boletín
 Test case #4: Verificar que no se pueda crear cuenta cuando haya un campo obligatorio sin diligenciar
-Test case #5: Verificar que no se pueda crear cuenta cuando el RUT no sea valido
+Test case #5: Verificar que no se pueda crear cuenta cuando el identification_number no sea valido
 Test case #6: Verificar que la contraseña este oculta por defecto
 Test case #7: Verificar que la contraseña sea visible cuando el usuario lo solicite
 Test case #8: Verificar mensaje de error cuando la contraseña no coincide
