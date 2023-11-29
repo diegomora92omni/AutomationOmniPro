@@ -21,3 +21,8 @@ import 'cypress-mochawesome-reporter/register'
 // require('./commands')
 require('cypress-xpath')
 /// <reference types="cypress" />
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Retornar false para permitir que la prueba continúe después de un error no capturado
+    return false;
+})

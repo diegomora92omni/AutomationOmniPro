@@ -14,7 +14,7 @@ describe('Test cases for Create Account flow', () => {
     cy.visit('https://mcstaging2.kliper.cl/kliper_store_view/')
     })
     
-    context('Account creation flow', () => {
+    context('Create Account flow', () => {
     // Test case #1: Verificar que un usuario no registrado pueda crear una cuenta
     it('CRE-001: Verify that an unregistered user can create an account', () => {
         // Hacer clic en el botón "Iniciar sesión"
@@ -122,7 +122,7 @@ describe('Test cases for Create Account flow', () => {
         cy.get('#email_address-error').should('exist').should('have.text', 'Este es un campo obligatorio.')
 })
     // Test case #5: Verificar que no se pueda crear cuenta cuando el identification_number no sea valido
-    it('CRE-005: Verify that it is not possible to create an account when the identification_number is not valid', () => {
+    it.only('CRE-005: Verify that it is not possible to create an account when the identification_number is not valid', () => {
         // Hacer clic en el botón "Iniciar sesión"
         cy.get('.panel > .header > .link > a').click({ force: true })
         // Hacer clic en el botón de "Crear una cuenta"
@@ -141,11 +141,11 @@ describe('Test cases for Create Account flow', () => {
         cy.get('#password').type(dataUser.password[0])
         cy.get('#password-confirmation').type(dataUser.password[0])
         //Hacer click en checkbox para aceptar política de privacidad de datos
-        cy.get('#data_privacy_policies_allowed').click()
+        cy.get('#data_privacy_policies_allowed').check()
         //Hacer clic en botón "crear una cuenta" para confirmar el registro
         cy.get('#send2').click()
         //Verificar que aparezca mensaje de error
-        cy.get('.message-error').should('exist')        
+        cy.get('#identification_number-error').should('exist')        
 })
     // Test case #6: Verificar que la contraseña este oculta por defecto
 it('CRE-006: Verify that the password is hidden by default', () => {
@@ -313,7 +313,7 @@ it('CRE-006: Verify that the password is hidden by default', () => {
             cy.get('.message-success').should('exist')
         })      
         // Test case #14: Verificar que aceptar la política de privacidad de datos sea obligatorio
-         it.only('CRE-014: Verify that an unregistered user can create an account', () => {
+         it('CRE-014: Verify that an unregistered user can create an account', () => {
         // Hacer clic en el botón "Iniciar sesión"
         cy.get('.panel > .header > .link > a').click({ force: true })
         // Hacer clic en el botón de "Crear una cuenta"
