@@ -78,7 +78,7 @@ describe('Test cases for Login flow', () => {
         cy.get('.column > p').should('exist').and('have.text','Usted ha cerrado la sesión e irá a su página de inicio en 5 segundos.')
     })      
     // Test case #6: Verificar que un usuario pueda cambiar su contraseña y loguearse nuevamente
-    it('LOG-006: Verify that a user can change his password and log in again.', () => {
+    it.only('LOG-006: Verify that a user can change his password and log in again.', () => {
         // Hacer clic en el botón "Iniciar sesión"
         cy.get('.panel > .header > .link > a').click({ force: true })
         // Llenar formulario de "Clientes registrados"
@@ -87,7 +87,7 @@ describe('Test cases for Login flow', () => {
         // Hacer clic en botón "Iniciar sesión"
         cy.get('#send2').click()
         // Hacer clic en botón "Mi Cuenta"
-        cy.get('#idybGgwSAJ').click({ force: true })
+        cy.get('a[id^="id"]').contains('Mi Cuenta').click({ force: true })
         // Hacer clic en botón "Cambiar la contraseña"
         cy.get('.change-password').click()
         // Llenar formulario de "Cambiar la contraseña"

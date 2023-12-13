@@ -122,7 +122,7 @@ describe('Test cases for Create Account flow', () => {
         cy.get('#email_address-error').should('exist').should('have.text', 'Este es un campo obligatorio.')
 })
     // Test case #5: Verificar que no se pueda crear cuenta cuando el identification_number no sea valido
-    it.only('CRE-005: Verify that it is not possible to create an account when the identification_number is not valid', () => {
+    it('CRE-005: Verify that it is not possible to create an account when the identification_number is not valid', () => {
         // Hacer clic en el botón "Iniciar sesión"
         cy.get('.panel > .header > .link > a').click({ force: true })
         // Hacer clic en el botón de "Crear una cuenta"
